@@ -1,0 +1,7 @@
+int fputc(int ch, FILE *f)
+{
+	uint8_t chr2send = 0;
+	chr2send =  ch;
+	HAL_UART_Transmit(&huart1, &chr2send, sizeof(chr2send) ,10);
+	return ch;
+}
